@@ -1,0 +1,83 @@
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background: #dbd8e3;
+}
+table {
+  margin: 15px;
+  border-collapse: margin-top;
+}
+.row {
+  display: inline;
+  margin: 0 auto;
+}
+.currentWeather {
+  display: inline-flex;
+  padding: 20px;
+  margin: 30px 15px 25px 30px;
+  font-size: 70px;
+}
+.weatherText {
+  display: inline-block;
+  margin: 0 0 0 30px;
+  font-size: 25px;
+  line-height: 24px;
+  font-weight: 600;
+  padding: 15px 20px;
+}
+.overallContainer {
+  margin: 10px auto;
+  width: 612px;
+  height: 310px;
+}
+.labelContainerCompact {
+  margin-bottom: 8px;
+  width: 100%;
+}
+.labelLocation {
+  height: 22px;
+  font-size: 22px;
+  line-height: 22px;
+  font-weight: 600;
+}
+.labelDay,
+.labelTime,
+.labelDate {
+  margin: 0 15px;
+  font-size: 18px;
+  line-height: 25px;
+}
+.searchingLocation {
+  padding: 10px 12px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+}
+.weather-app {
+  border: 1px solid #dbd8e3;
+  background: #ffffff;
+  padding: 15px;
+  margin: 20px auto;
+  border-radius: 10px;
+  max-width: 600px;
+}
+.weather-icon {
+  height: 64px;
+  width: 64px;
+  margin-right: 10px;
+}
+.temperature {
+  font-size: 64px;
+  font-weight: 400;
+  line-height: 1;
+}
+.units {
+  position: relative;
+  font-size: 25px;
+  top: -25px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 103px);
+  margin: 160px auto;
+  width: 595px;
+}
