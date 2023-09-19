@@ -78,6 +78,10 @@ table {
 .grid {
   display: grid;
   grid-template-columns: repeat(6, 103px);
-  margin: 160px auto;
+  margin: 160px auto 0 auto;
   width: 595px;
+}
+.openSourceCode {
+  text-align: center;
+  margin: 15px auto;
 }
