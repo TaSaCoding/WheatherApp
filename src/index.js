@@ -56,6 +56,12 @@ function displayWeatherCondition(response) {
   windspeedData.innerHTML = `Wind-Speed: ${Math.round(
     response.data.wind.speed
   )}km/h`;
+  let iconElement = document.querySelector("#icon");
+  iconElement.setAttribute(
+    "src",
+    `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+  );
+  iconElement.setAttribute("alt", response.data.weather[0].description);
 }
 function searchCity(city) {
   let apiKey = "6e6ec494746b5229a9f2d526478c924c";
@@ -76,6 +82,7 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
+searchCity("Cologne");
 let searchForm = document.querySelector("#city-input");
 searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#currentLocation");
