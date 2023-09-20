@@ -40,8 +40,6 @@ function weekTime() {
   let currentTime = document.querySelector("#current-time");
   currentTime.innerHTML = `${hours}:${minutes}`;
 }
-weekTime();
-
 function displayWeatherCondition(response) {
   let newCity = document.querySelector("#city");
   let cityTemperature = Math.round(response.data.main.temp);
@@ -98,6 +96,32 @@ function displayCelsiusTemperature(event) {
   fahrenheitLink.classList.remove("active");
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
+function displayforecast() {
+  let forecastElement = document.querySelector("#forecast");
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon", "Tue"];
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="col-2">
+    <img
+      src="http://openweathermap.org/img/wn/50d@2x.png"
+      alt=""
+      class="weather-icon float-left"
+    />
+    <div class="weather-forecast-date">${day}</div>
+    <div class="weather-forecast-temperatures">
+      <span class="weather-forecast-temperature-max"> 18° </span>
+      <span class="weather-forecast-temperature-min"> 12° </span>
+    </div>
+  </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
 let searchForm = document.querySelector("#city-input");
 searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#currentLocation");
@@ -107,4 +131,6 @@ let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);
+weekTime();
 searchCity("Cologne");
+displayforecast();

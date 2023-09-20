@@ -60,8 +60,8 @@ a {
   font-weight: 400;
 }
 .weather-app {
-  border: 1px solid #dbd8e3;
-  background: #ffffff;
+  border: 1px solid #f8f9fa;
+  background: #f8f9fa;
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
@@ -83,6 +83,11 @@ a {
   top: -25px;
 }
 .weather-forecast {
+  border: 1px solid #f8f9fa;
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 600px;
   display: grid;
   grid-template-columns: repeat(6, 103px);
   margin: 160px auto 0 auto;
