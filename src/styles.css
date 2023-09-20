@@ -6,6 +6,9 @@ table {
   margin: 15px;
   border-collapse: margin-top;
 }
+a {
+  text-decoration: none;
+}
 .row {
   display: inline;
   margin: 0 auto;
@@ -15,6 +18,10 @@ table {
   padding: 20px;
   margin: 30px 15px 25px 30px;
   font-size: 70px;
+}
+.currentWeather .active {
+  color: black;
+  cursor: default;
 }
 .weatherText {
   display: inline-block;

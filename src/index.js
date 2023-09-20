@@ -44,19 +44,20 @@ weekTime();
 
 function displayWeatherCondition(response) {
   let newCity = document.querySelector("#city");
-  newCity.innerHTML = response.data.name;
   let cityTemperature = Math.round(response.data.main.temp);
   let mainTemp = document.querySelector("#temperature");
+  let humidityData = document.querySelector("#humidity");
+  let windspeedData = document.querySelector("#wind");
+  let iconElement = document.querySelector("#icon");
+  newCity.innerHTML = response.data.name;
   mainTemp.innerHTML = `${cityTemperature}`;
+  celsiusTemperature = response.data.main.temp;
   document.querySelector("#weather-text").innerHTML =
     response.data.weather[0].main;
-  let humidityData = document.querySelector("#humidity");
   humidityData.innerHTML = `Humidity: ${response.data.main.humidity}%`;
-  let windspeedData = document.querySelector("#wind");
   windspeedData.innerHTML = `Wind-Speed: ${Math.round(
     response.data.wind.speed
   )}km/h`;
-  let iconElement = document.querySelector("#icon");
   iconElement.setAttribute(
     "src",
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
@@ -82,8 +83,28 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-searchCity("Cologne");
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#temperature");
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
 let searchForm = document.querySelector("#city-input");
 searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#currentLocation");
 currentLocationButton.addEventListener("click", getCurrentLocation);
+let celsiusTemperature = null;
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
+searchCity("Cologne");
