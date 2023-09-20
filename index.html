@@ -23,119 +23,88 @@
     ></script>
   </head>
   <body>
-    <div class="overallContainer">  
-        <div class="weather-app">
-          <div class="headerRow"> 
-              <nav class="navbar navbar-expand-lg navbar-light bg-light<nav class="navbar navbar-light bg-light" >
-                  <div class="container-fluid" id= "city-input">
-                    <a class="navbar-brand"><div class="labelLocation" id="city"> 
-                    </div></a>
-                    <form class="d-flex searchingLocation">
-                      <input class="form-control me-2"
-                      type="search"
-                      placeholder="Type a City"
-                      autofocus="on"
-                      autocomplete="off"
-                      aria-label="search"
-                      id="location-search"
-                      >
-                      <button class="btn btn-outline-primary me-2" type="submit">search</button>
-                      <button class="btn btn-sm btn-outline-primary" id="currentLocation" type="submit">current</button>                
-                    </form>
-                  </div>
-                </nav>
-            <div class="labelContainerCompact"> 
-              <div class="labelDay" id="week-day">    
-              </div>
-              <div class="labelTime" id="current-time"> 
-              </div>
+    <div class="overallContainer">
+      <div class="weather-app">
+        <div class="headerRow">
+          <nav class="navbar navbar-expand-lg navbar-light bg-light
+          <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid" id="city-input">
+              <a class="navbar-brand"
+                ><div class="labelLocation" id="city"></div
+              ></a>
+              <form class="d-flex searchingLocation">
+                <input
+                  class="form-control me-2"
+                  type="search"
+                  placeholder="Type a City"
+                  autofocus="on"
+                  autocomplete="off"
+                  aria-label="search"
+                  id="location-search"
+                />
+                <button class="btn btn-outline-primary me-2" type="submit">
+                  search
+                </button>
+                <button
+                  class="btn btn-sm btn-outline-primary"
+                  id="currentLocation"
+                  type="submit"
+                >
+                  current
+                </button>
+              </form>
             </div>
-
-         
-          </div> 
-        
-        
-          <div class="row">
-              <div class="clearfix currentWeather">
-              <img src="" alt="" id="icon" class="float-left"/>
-                <div class="float-left">
-                  <span class="temperature" id="temperature"></span>
-                  <span class="units">
-                      <a href="#" id="celsius-link" class="active">°C</a>
-                  | <a href="#" id="fahrenheit-link">°F</a></span>
-                </div>
-                <span class="weatherText" id="weather-text"></span>
-              </div>
-  
-              <table>
-                <tbody>
-                  <tr>
-                    <th scope="col"id="humidity"></th>
-                    <th scope="col"id="wind"></th> 
-                  </tr>
-                </tbody>
-              </table>  
-            </div>
+          </nav>
+          <div class="labelContainerCompact">
+            <div class="labelDay" id="week-day"></div>
+            <div class="labelTime" id="current-time"></div>
+          </div>
         </div>
+
+        <div class="row">
+          <div class="clearfix currentWeather">
+            <img src="" alt="" id="icon" class="float-left" />
+            <div class="float-left">
+              <span class="temperature" id="temperature"></span>
+              <span class="units">
+                <a href="#" id="celsius-link" class="active">°C</a>
+                | <a href="#" id="fahrenheit-link">°F</a></span
+              >
+            </div>
+            <span class="weatherText" id="weather-text"></span>
+          </div>
+
+          <table>
+            <tbody>
+              <tr>
+                <th scope="col" id="humidity"></th>
+                <th scope="col" id="wind"></th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
-      
 
-<div class="grid">
-      <div class="card" style="width: 5rem;">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="Cloudy icon"
-          class="weather-icon float-left">
-          <div class="card-body">
-            <p class="card-text">TUE<h5>25°</h5></p>
-          </div>
-      </div>
-      <div class="card" style="width: 5rem;">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="Cloudy icon"
-          class="weather-icon float-left">
-          <div class="card-body">
-            <p class="card-text">WED<h5>20°</h5></p>
-          </div>
-      </div>
-      <div class="card" style="width: 5rem;">
-            <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-            alt="Cloudy icon"
-            class="weather-icon float-left">
-            <div class="card-body">
-              <p class="card-text">THU<h5>19°</h5></p>
-            </div>
-       </div>  
-       <div class="card" style="width: 5rem;">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="Cloudy icon"
-          class="weather-icon float-left">
-          <div class="card-body">
-            <p class="card-text">FRI<h5>21°</h5></p>
-          </div>
-      </div>   
-      <div class="card" style="width: 5rem;">
-          <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-          alt="Cloudy icon"
-          class="weather-icon float-left">
-          <div class="card-body">
-            <p class="card-text">SAT<h5>17°</h5></p>
-          </div>
-      </div>   
-      <div class="card" style="width: 5rem;">
-        <img src="https://ssl.gstatic.com/onebox/weather/64/partly_cloudy.png"
-         alt="Cloudy icon"
-          class="weather-icon float-left">
-        <div class="card-body">
-          <p class="card-text">SUN<h5>15°</h5></p>
+    <div class="weather-forecast">
+      <div class="card" style="width: 5rem">
+        <img
+          src="http://openweathermap.org/img/wn/50d@2x.png"
+          alt=""
+          class="weather-icon float-left"
+        />
+        <div class="weather-forecast-date">Thu</div>
+        <div class="weather-forecast-temperatures">
+          <span class="weather-forecast-temperature-max"> 18° </span>
+          <span class="weather-forecast-temperature-min"> 12° </span>
         </div>
-      </div> 
-      
-    </div> 
+      </div>
+    </div>
     <div class="openSourceCode">
-        <a href="https://github.com/TaSaCoding/WheatherApp.git" target="_blank">
-            Open-source code
-        </a>
-         , by Tanja Sauer
+      <a href="https://github.com/TaSaCoding/WheatherApp.git" target="_blank">
+        Open-source code
+      </a>
+      , by Tanja Sauer
     </div>
 
     <script src="src/index.js"></script>

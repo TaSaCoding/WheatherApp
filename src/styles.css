@@ -68,8 +68,8 @@ a {
   max-width: 600px;
 }
 .weather-icon {
-  height: 64px;
-  width: 64px;
+  height: 72px;
+  width: 72px;
   margin-right: 10px;
 }
 .temperature {
@@ -82,11 +82,23 @@ a {
   font-size: 25px;
   top: -25px;
 }
-.grid {
+.weather-forecast {
   display: grid;
   grid-template-columns: repeat(6, 103px);
   margin: 160px auto 0 auto;
   width: 595px;
+  text-align: center;
+  color: #141414;
+}
+.weather-forecast-date {
+  font-size: 18px;
+  opacity: 0.7;
+}
+.weather-forecast-temperature-min {
+  opacity: 0.7;
+}
+.weather-forecast-temperatures {
+  font-size: 14px;
 }
 .openSourceCode {
   text-align: center;
