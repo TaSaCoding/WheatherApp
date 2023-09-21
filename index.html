@@ -26,7 +26,7 @@
     <div class="overallContainer">
       <div class="weather-app">
         <div class="headerRow">
-          <nav class="navbar navbar-expand-lg navbar-light bg-light
+          <nav class="navbar navbar-expand-lg navbar-light bg-#a49aa8
           <nav class="navbar navbar-light bg-light">
             <div class="container-fluid" id="city-input">
               <a class="navbar-brand"
@@ -42,11 +42,11 @@
                   aria-label="search"
                   id="location-search"
                 />
-                <button class="btn btn-outline-primary me-2" type="submit">
+                <button class="btn btn-outline-light me-2" type="submit">
                   search
                 </button>
                 <button
-                  class="btn btn-sm btn-outline-primary"
+                  class="btn btn-outline-light"
                   id="currentLocation"
                   type="submit"
                 >
@@ -62,6 +62,7 @@
         </div>
 
         <div class="row">
+          <span class="weatherText" id="weather-text"></span>
           <div class="clearfix currentWeather">
             <img src="" alt="" id="icon" class="float-left" />
             <div class="float-left">
@@ -71,7 +72,6 @@
                 | <a href="#" id="fahrenheit-link">°F</a></span
               >
             </div>
-            <span class="weatherText" id="weather-text"></span>
           </div>
 
           <table>
@@ -95,5 +95,6 @@
     </div>
 
     <script src="src/index.js"></script>
+    <script src="src/weather-icon.js"></script>
   </body>
 </html>

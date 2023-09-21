@@ -1,13 +1,19 @@
 body {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background: #dbd8e3;
+  color: #ffffff;
+  background: #e0d8e3;
 }
 table {
   margin: 15px;
   border-collapse: margin-top;
 }
 a {
+  color: #b17ee0;
   text-decoration: none;
+}
+img {
+  width: 200px;
+  padding: 0;
 }
 .row {
   display: inline;
@@ -15,21 +21,20 @@ a {
 }
 .currentWeather {
   display: inline-flex;
-  padding: 20px;
-  margin: 30px 15px 25px 30px;
+  margin: 5px 10px;
   font-size: 70px;
 }
 .currentWeather .active {
-  color: black;
+  color: #ffffff;
   cursor: default;
 }
 .weatherText {
   display: inline-block;
-  margin: 0 0 0 30px;
+  margin: 0 auto;
   font-size: 25px;
   line-height: 24px;
   font-weight: 600;
-  padding: 15px 20px;
+  padding: 15px;
 }
 .overallContainer {
   margin: 10px auto;
@@ -41,8 +46,9 @@ a {
   width: 100%;
 }
 .labelLocation {
+  color: #ffffff;
   height: 22px;
-  font-size: 22px;
+  font-size: 30px;
   line-height: 22px;
   font-weight: 600;
 }
@@ -60,18 +66,18 @@ a {
   font-weight: 400;
 }
 .weather-app {
-  border: 1px solid #f8f9fa;
-  background: #f8f9fa;
+  border: 1px solid #75607e;
+  background: #75607e;
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 600px;
 }
 .weather-icon {
-  height: 72px;
-  width: 72px;
-  margin-right: 10px;
+  margin-block-start: 5px;
+  margin-block-end: 5px;
 }
+
 .temperature {
   font-size: 64px;
   font-weight: 400;
@@ -83,17 +89,17 @@ a {
   top: -25px;
 }
 .weather-forecast {
-  border: 1px solid #f8f9fa;
-  background: #f8f9fa;
+  border: 1px solid #75607e;
+  background: #75607e;
   padding: 15px;
   border-radius: 10px;
   max-width: 600px;
-  display: grid;
-  grid-template-columns: repeat(6, 103px);
   margin: 160px auto 0 auto;
   width: 595px;
   text-align: center;
-  color: #141414;
+  color: #e0d8e3;
+  display: grid;
+  grid-template-columns: repeat(6, 103px);
 }
 .weather-forecast-date {
   font-size: 18px;
@@ -106,6 +112,7 @@ a {
   font-size: 14px;
 }
 .openSourceCode {
+  color: #75607e;
   text-align: center;
   margin: 15px auto;
 }
