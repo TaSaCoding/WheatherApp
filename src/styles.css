@@ -4,8 +4,7 @@ body {
   background: #e0d8e3;
 }
 table {
-  margin: 15px;
-  border-collapse: margin-top;
+  text-align: center;
 }
 a {
   color: #b17ee0;
@@ -13,15 +12,10 @@ a {
 }
 img {
   width: 200px;
-  padding: 0;
-}
-.row {
-  display: inline;
-  margin: 0 auto;
 }
 .currentWeather {
   display: inline-flex;
-  margin: 5px 10px;
+  margin: 0 70px;
   font-size: 70px;
 }
 .currentWeather .active {
@@ -34,7 +28,7 @@ img {
   font-size: 25px;
   line-height: 24px;
   font-weight: 600;
-  padding: 15px;
+  padding: 25px;
 }
 .overallContainer {
   margin: 10px auto;
@@ -66,18 +60,19 @@ img {
   font-weight: 400;
 }
 .weather-app {
-  border: 1px solid #75607e;
-  background: #75607e;
+  border: 1px solid #64607e;
+  background: #64607e;
   padding: 15px;
   margin: 20px auto;
   border-radius: 10px;
   max-width: 600px;
 }
 .weather-icon {
+  width: 50px;
+  padding: 0;
   margin-block-start: 5px;
   margin-block-end: 5px;
 }
-
 .temperature {
   font-size: 64px;
   font-weight: 400;
@@ -89,17 +84,15 @@ img {
   top: -25px;
 }
 .weather-forecast {
-  border: 1px solid #75607e;
-  background: #75607e;
+  border: 1px solid #64607e;
+  background: #64607e;
   padding: 15px;
   border-radius: 10px;
   max-width: 600px;
-  margin: 160px auto 0 auto;
+  margin: 200px auto 0 auto;
   width: 595px;
   text-align: center;
   color: #e0d8e3;
-  display: grid;
-  grid-template-columns: repeat(6, 103px);
 }
 .weather-forecast-date {
   font-size: 18px;
@@ -115,4 +108,14 @@ img {
   color: #75607e;
   text-align: center;
   margin: 15px auto;
+}
+.grid {
+  border: 1px solid #64607e;
+  background: #64607e;
+  color: #e0d8e3;
+  padding: 10px 50px 5px 50px;
+  text-align: center;
+  border-radius: 10px;
+  display: grid;
+  max-width: 600px;
 }
